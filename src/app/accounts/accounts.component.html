@@ -1,0 +1,35 @@
+<h1>Accounts Page</h1>
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Balance</th>
+      <th>Transactions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let account of accounts">
+      <td>{{ account.customer.firstName }}</td>
+      <td>{{ account.customer.lastName }}</td>
+      <td>
+        <strong>{{ account.balance }}</strong> EUR
+      </td>
+      <td>
+        <button (click)="toggleTransactions(account)">See Transactions</button>
+      </td>
+    </tr>
+    <tr *ngIf="accountWithTransactions">
+      <td colspan="4">
+        <ul>
+          <li *ngFor="let transaction of accountWithTransactions.transactions">
+            {{ transaction.date }} ->
+            <strong
+              >{{ transaction.description }} {{ transaction.amount }}EUR</strong
+            >
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,27 @@
+/* Styling for the navigation menu */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+li {
+  padding: 10px;
+  display: inline-block; /* Change back to display: inline-block */
+}
+
+/* Styling for the navigation links */
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+  display: inline-block; /* Change back to display: inline-block */
+  white-space: nowrap; /* Prevent line wrapping */
+}
+
+a:hover {
+  border-bottom: 2px solid #4caf50;
+}
